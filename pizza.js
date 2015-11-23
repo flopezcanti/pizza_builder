@@ -1,28 +1,70 @@
 // Write your Pizza Builder JavaScript in this file.
 
 
+
+function changeTotal(toppingPrice) {
+
+	var total = $('.panel.price strong').text().replace('$', '');
+	var	totalInt = parseInt(total)
+	$('.panel.price strong').text('$' + (totalInt + toppingPrice));
+}
+
 $('.btn-pepperonni').on('click', function(event) {
 	$('.pep').toggle();
-	$(event.currentTarget).toggleClass('active')
+	var currentElement = $(event.currentTarget);
+	currentElement.toggleClass('active')
+
+	if (currentElement.hasClass('active')) {
+			changeTotal(1)
+	} else {
+			changeTotal(-1)
+	}
 });
 
 $('.btn-mushrooms').on('click', function(event) {
 	$('.mushroom').toggle();
-	$(event.currentTarget).toggleClass('active')
+	var currentElement = $(event.currentTarget);
+	currentElement.toggleClass('active')
+
+	if (currentElement.hasClass('active')) {
+			changeTotal(1)
+	} else {
+			changeTotal(-1)
+	}
 });
 
 $('.btn-green-peppers').on('click', function(event) {
 	$('.green-pepper').toggle();
-	$(event.currentTarget).toggleClass('active')
+	var currentElement = $(event.currentTarget);
+	currentElement.toggleClass('active')
+
+	if (currentElement.hasClass('active')) {
+			changeTotal(1)
+	} else {
+			changeTotal(-1)
+	}
 });
 
 $('.btn-sauce').on('click',function(event){
   $('.sauce').toggleClass('sauce-white');
-  $(event.currentTarget).toggleClass('active')
+  var currentElement = $(event.currentTarget);
+	currentElement.toggleClass('active')
+
+	if (currentElement.hasClass('active')) {
+			changeTotal(3)
+	} else {
+			changeTotal(-3)
+	}
 });
 
 $('.btn-crust').on('click',function(event){
   $('.crust').toggleClass('crust-gluten-free');
-  $(event.currentTarget).toggleClass('active')
-});
+  var currentElement = $(event.currentTarget);
+	currentElement.toggleClass('active')
 
+	if (currentElement.hasClass('active')) {
+			changeTotal(5)
+	} else {
+			changeTotal(-5)
+	}
+});
