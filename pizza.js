@@ -1,6 +1,6 @@
 // Write your Pizza Builder JavaScript in this file.
 
-
+$('.panel.price ul')
 
 function changeTotal(toppingPrice) {
 
@@ -19,6 +19,8 @@ $('.btn-pepperonni').on('click', function(event) {
 	} else {
 			changeTotal(-1)
 	}
+
+	$('.panel.price ul li:nth-child(1)').toggle()
 });
 
 $('.btn-mushrooms').on('click', function(event) {
@@ -31,6 +33,7 @@ $('.btn-mushrooms').on('click', function(event) {
 	} else {
 			changeTotal(-1)
 	}
+	$('.panel.price ul li:nth-child(2)').toggle()
 });
 
 $('.btn-green-peppers').on('click', function(event) {
@@ -43,6 +46,7 @@ $('.btn-green-peppers').on('click', function(event) {
 	} else {
 			changeTotal(-1)
 	}
+	$('.panel.price ul li:nth-child(3)').toggle()
 });
 
 $('.btn-sauce').on('click',function(event){
@@ -55,6 +59,7 @@ $('.btn-sauce').on('click',function(event){
 	} else {
 			changeTotal(-3)
 	}
+	$('.panel.price ul li:nth-child(4)').toggle()
 });
 
 $('.btn-crust').on('click',function(event){
@@ -67,4 +72,5 @@ $('.btn-crust').on('click',function(event){
 	} else {
 			changeTotal(-5)
 	}
+	$('.panel.price ul li:nth-child(5)').toggle()
 });
