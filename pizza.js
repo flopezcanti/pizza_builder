@@ -2,13 +2,21 @@
 
 
 $('.btn-pepperonni').on('click', function() {
-	$('.pep').toggle()
+	$('.pep').toggle();
 });
 
 $('.btn-mushrooms').on('click', function() {
-	$('.mushroom').toggle()
+	$('.mushroom').toggle();
 });
 
 $('.btn-green-peppers').on('click', function() {
-	$('.green-pepper').toggle()
+	$('.green-pepper').toggle();
+});
+
+$('.btn-sauce').on('click',function(){
+  $('.sauce').toggleClass('sauce-white');
+});
+
+$('.btn-crust').on('click',function(){
+  $('.crust').toggleClass('crust-gluten-free');
 });
